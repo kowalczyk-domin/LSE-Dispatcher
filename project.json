@@ -4,6 +4,8 @@
   "description": "Dispatcher process – prepares stock batch and enqueues items for Performer\r\n",
   "main": "Main.xaml",
   "dependencies": {
+    "UiPath.Excel.Activities": "[3.3.1]",
+    "UiPath.Persistence.Activities": "[1.7.2]",
     "UiPath.System.Activities": "[25.6.1]"
   },
   "webServices": [],
