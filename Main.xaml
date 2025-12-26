@@ -110,7 +110,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="936,1774" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="959,1999" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="addedItemsCount" />
       <Variable x:TypeArguments="scg:Dictionary(x:String, x:Object)" Name="specificContent" />
@@ -134,7 +134,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence sap2010:Annotation.AnnotationText="Główny proces Dispatcher odpowiedzialny za przygotowanie wsadu danych giełdowych oraz przekazanie jednostek pracy do Orchestratora. Proces realizuje inicjalizację konfiguracji środowiskowej, wybór źródła danych wejściowych oraz kontrolę jakości danych przed kolejkowaniem do dalszego przetwarzania." DisplayName="Main - London Stock Exchange RPA Dispatcher" sap:VirtualizedContainerService.HintSize="484,768" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence sap2010:Annotation.AnnotationText="Główny proces Dispatcher odpowiedzialny za przygotowanie wsadu danych giełdowych oraz przekazanie jednostek pracy do Orchestratora. Proces realizuje inicjalizację konfiguracji środowiskowej, wybór źródła danych wejściowych oraz kontrolę jakości danych przed kolejkowaniem do dalszego przetwarzania." DisplayName="Main - London Stock Exchange RPA Dispatcher" sap:VirtualizedContainerService.HintSize="554,1976" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -142,7 +142,7 @@
           <x:Boolean x:Key="IsPinned">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap2010:Annotation.AnnotationText="Sekcja inicjalizująca kontekst wykonania Dispatchera.&#xD;&#xA;Odpowiada za rozpoczęcie śledzenia procesu, wygenerowanie&#xD;&#xA;znacznika czasu UTC oraz unikalnego BatchId, który pozwala&#xD;&#xA;jednoznacznie powiązać wszystkie logi i elementy kolejki&#xD;&#xA;z jednym uruchomieniem procesu." DisplayName="Initialize Dispatcher Runtime Context" sap:VirtualizedContainerService.HintSize="450,151" sap2010:WorkflowViewState.IdRef="Sequence_33">
+      <Sequence sap2010:Annotation.AnnotationText="Sekcja inicjalizująca kontekst wykonania Dispatchera.&#xA;Odpowiada za rozpoczęcie śledzenia procesu, wygenerowanie&#xA;znacznika czasu UTC oraz unikalnego BatchId, który pozwala&#xA;jednoznacznie powiązać wszystkie logi i elementy kolejki&#xA;z jednym uruchomieniem procesu." DisplayName="Initialize Dispatcher Runtime Context" sap:VirtualizedContainerService.HintSize="520,151" sap2010:WorkflowViewState.IdRef="Sequence_33">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -199,7 +199,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
       </Sequence>
-      <Sequence sap2010:Annotation.AnnotationText="Sekcja inicjalizacyjna odpowiedzialna za pobranie i walidację krytycznej konfiguracji środowiskowej.&#xA;Brak któregokolwiek z wymaganych parametrów powoduje natychmiastowe przerwanie procesu (fail fast)" DisplayName="Initialize Critical Configuration" sap:VirtualizedContainerService.HintSize="450,134" sap2010:WorkflowViewState.IdRef="Sequence_9">
+      <Sequence sap2010:Annotation.AnnotationText="Sekcja inicjalizacyjna odpowiedzialna za pobranie i walidację krytycznej konfiguracji środowiskowej.&#xA;Brak któregokolwiek z wymaganych parametrów powoduje natychmiastowe przerwanie procesu (fail fast)" DisplayName="Initialize Critical Configuration" sap:VirtualizedContainerService.HintSize="520,134" sap2010:WorkflowViewState.IdRef="Sequence_9">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -216,11 +216,11 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <TryCatch.Try>
-            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="450,467" sap2010:WorkflowViewState.IdRef="Sequence_4">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Pobranie nazwy kolejki z UiPath Orchestrator pozwala zmieniać konfigurację środowiskową bez konieczności modyfikacji i ponownego publikowania kodu. &#xA;Stron 8 w specyfikacji." AssetName="QueueName" CacheStrategy="None" DisplayName="Get Target Queue Name From Orchestrator Assets" FolderPath="LSE" sap:VirtualizedContainerService.HintSize="416,151" sap2010:WorkflowViewState.IdRef="GetRobotAsset_2">
@@ -310,11 +310,11 @@
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <If.Then>
-            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,25" sap2010:WorkflowViewState.IdRef="Sequence_34">
+            <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,108" sap2010:WorkflowViewState.IdRef="Sequence_34">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Throw DisplayName="Abort Due To Invalid Input Source Type" Exception="[New Exception(&quot;Invalid InputSourceType value. Allowed values: LocalPath, Url, StorageBucket.&quot;)]" sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Throw_6" />
@@ -332,25 +332,24 @@
           </If.Else>
         </If>
       </Sequence>
-      <Sequence sap2010:Annotation.AnnotationText="Sekcja odpowiedzialna za wybór i załadowanie konfiguracji źródła danych wejściowych w zależności od wartości InputSourceType." DisplayName="Resolve Input Source Configuration" sap:VirtualizedContainerService.HintSize="450,102" sap2010:WorkflowViewState.IdRef="Sequence_10">
+      <Sequence sap2010:Annotation.AnnotationText="Sekcja odpowiedzialna za wybór i załadowanie konfiguracji źródła danych wejściowych w zależności od wartości InputSourceType." DisplayName="Resolve Input Source Configuration" sap:VirtualizedContainerService.HintSize="520,1304" sap2010:WorkflowViewState.IdRef="Sequence_10">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Wybór ścieżki ładowania danych wejściowych na podstawie skonfigurowanego typu źródła." DisplayName="Select Input Source Type" Expression="[inputSourceType]" sap:VirtualizedContainerService.HintSize="416,102" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+        <Switch x:TypeArguments="x:String" sap2010:Annotation.AnnotationText="Wybór ścieżki ładowania danych wejściowych na podstawie skonfigurowanego typu źródła." DisplayName="Select Input Source Type" Expression="[inputSourceType]" sap:VirtualizedContainerService.HintSize="486,1058" sap2010:WorkflowViewState.IdRef="Switch`1_1">
           <Switch.Default>
-            <Sequence sap2010:Annotation.AnnotationText="Strona 12 w dokumetnacji" DisplayName="Default" sap:VirtualizedContainerService.HintSize="520,350" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <Sequence DisplayName="Default" sap:VirtualizedContainerService.HintSize="484,319" sap2010:WorkflowViewState.IdRef="Sequence_11">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">True</x:Boolean>
-                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage sap2010:Annotation.AnnotationText="Obsługa nieobsługiwanego typu źródła danych. Jest to stan nieoczekiwany,&#xA;wskazujący na błąd konfiguracji lub niespójność procesu." DisplayName="Log Unsupported Input Source Type" sap:VirtualizedContainerService.HintSize="486,134" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Error" Message="[&quot;Unsupported InputSourceType encountered: &quot; &amp; inputSourceType &amp; &quot;. Dispatcher execution aborted.&quot;]">
+              <ui:LogMessage sap2010:Annotation.AnnotationText="Obsługa nieobsługiwanego typu źródła danych. Jest to stan nieoczekiwany,&#xA;wskazujący na błąd konfiguracji lub niespójność procesu." DisplayName="Log Unsupported Input Source Type" sap:VirtualizedContainerService.HintSize="450,134" sap2010:WorkflowViewState.IdRef="LogMessage_11" Level="Error" Message="[&quot;Unsupported InputSourceType encountered: &quot; &amp; inputSourceType &amp; &quot;. Dispatcher execution aborted.&quot;]">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -359,7 +358,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <Throw sap2010:Annotation.AnnotationText="Przerwanie procesu w przypadku wejścia w nieobsługiwaną gałąź wykonania.&#xA;Zapobiega to niekontrolowanemu dalszemu przetwarzaniu danych." DisplayName="Abort Due To Unsupported Input Source Type" Exception="[New Exception(&quot;Unsupported InputSourceType value: &quot; &amp; inputSourceType)]" sap:VirtualizedContainerService.HintSize="486,125" sap2010:WorkflowViewState.IdRef="Throw_2">
+              <Throw sap2010:Annotation.AnnotationText="Przerwanie procesu w przypadku wejścia w nieobsługiwaną gałąź wykonania.&#xA;Zapobiega to niekontrolowanemu dalszemu przetwarzaniu danych." DisplayName="Abort Due To Unsupported Input Source Type" Exception="[New Exception(&quot;Unsupported InputSourceType value: &quot; &amp; inputSourceType)]" sap:VirtualizedContainerService.HintSize="450,125" sap2010:WorkflowViewState.IdRef="Throw_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -372,19 +371,19 @@
           </Switch.Default>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">True</x:Boolean>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence x:Key="LocalPath" DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,108" sap2010:WorkflowViewState.IdRef="Sequence_12">
+          <Sequence x:Key="LocalPath" DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_12">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Load Input From Local Path" sap:VirtualizedContainerService.HintSize="486,48" sap2010:WorkflowViewState.IdRef="Sequence_14">
+            <Sequence DisplayName="Load Input From Local Path - EMPTY" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_14">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -393,14 +392,14 @@
               </sap:WorkflowViewStateService.ViewState>
             </Sequence>
           </Sequence>
-          <Sequence x:Key="Url" DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,108" sap2010:WorkflowViewState.IdRef="Sequence_15">
+          <Sequence x:Key="Url" DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,108" sap2010:WorkflowViewState.IdRef="Sequence_15">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Load Input From URL" sap:VirtualizedContainerService.HintSize="486,48" sap2010:WorkflowViewState.IdRef="Sequence_17">
+            <Sequence DisplayName="Load Input From URL - EMPTY" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_17">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -409,7 +408,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </Sequence>
           </Sequence>
-          <Sequence x:Key="StorageBucket" sap2010:Annotation.AnnotationText="Ścieżka ładowania danych wejściowych z centralnego Storage Bucket w Orchestratorze.&#xA;Umożliwia asynchroniczne dostarczanie plików wsadowych niezależnie od robota." DisplayName="Body" sap:VirtualizedContainerService.HintSize="520,1677" sap2010:WorkflowViewState.IdRef="Sequence_18">
+          <Sequence x:Key="StorageBucket" sap2010:Annotation.AnnotationText="Ścieżka ładowania danych wejściowych z centralnego Storage Bucket w Orchestratorze.&#xA;Umożliwia asynchroniczne dostarczanie plików wsadowych niezależnie od robota." DisplayName="Body" sap:VirtualizedContainerService.HintSize="484,185" sap2010:WorkflowViewState.IdRef="Sequence_18">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -417,11 +416,11 @@
                 <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Sequence DisplayName="Load Input From Storage Bucket" sap:VirtualizedContainerService.HintSize="486,1556" sap2010:WorkflowViewState.IdRef="Sequence_20">
+            <Sequence DisplayName="Load Input From Storage Bucket" sap:VirtualizedContainerService.HintSize="450,48" sap2010:WorkflowViewState.IdRef="Sequence_20">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <ui:GetRobotAsset TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="Pobranie nazwy Storage Bucket z Orchestratora. Parametr warunkowy,&#xA;wymagany wyłącznie dla ścieżki StorageBucket." AssetName="BucketName" CacheStrategy="None" DisplayName="Get Storage Bucket Name From Orchestrator Assets" FolderPath="LSE" sap:VirtualizedContainerService.HintSize="452,118" sap2010:WorkflowViewState.IdRef="GetRobotAsset_4">
@@ -705,7 +704,7 @@
             </Sequence>
           </Sequence>
         </Switch>
-        <ui:LogMessage sap2010:Annotation.AnnotationText="Log informacyjny potwierdzający poprawny odczyt danych oraz liczbę rekordów przekazanych do dalszego przetwarzania." DisplayName="Log Loaded CSV Records Count" sap:VirtualizedContainerService.HintSize="416,109" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Input CSV loaded successfully. Records count: &quot; &amp; dtInput.Rows.Count.ToString]">
+        <ui:LogMessage sap2010:Annotation.AnnotationText="Log informacyjny potwierdzający poprawny odczyt danych oraz liczbę rekordów przekazanych do dalszego przetwarzania." DisplayName="Log Loaded CSV Records Count" sap:VirtualizedContainerService.HintSize="486,109" sap2010:WorkflowViewState.IdRef="LogMessage_18" Level="Info" Message="[&quot;Input CSV loaded successfully. Records count: &quot; &amp; dtInput.Rows.Count.ToString]">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -715,7 +714,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:LogMessage>
       </Sequence>
-      <Sequence sap2010:Annotation.AnnotationText="Sekcja odpowiedzialna za iterację po danych wejściowych&#xD;&#xA;oraz tworzenie jednostek pracy w kolejce UiPath Orchestrator.&#xD;&#xA;Każdy rekord jest walidowany niezależnie, a do kolejki&#xD;&#xA;dodawane są wyłącznie poprawne elementy." DisplayName="Create Queue Items From Input Data" sap:VirtualizedContainerService.HintSize="450,134" sap2010:WorkflowViewState.IdRef="Sequence_39">
+      <Sequence sap2010:Annotation.AnnotationText="Sekcja odpowiedzialna za iterację po danych wejściowych&#xA;oraz tworzenie jednostek pracy w kolejce UiPath Orchestrator.&#xA;Każdy rekord jest walidowany niezależnie, a do kolejki&#xA;dodawane są wyłącznie poprawne elementy." DisplayName="Create Queue Items From Input Data" sap:VirtualizedContainerService.HintSize="520,134" sap2010:WorkflowViewState.IdRef="Sequence_39">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -899,7 +898,7 @@
           </sap:WorkflowViewStateService.ViewState>
         </ui:ForEachRow>
       </Sequence>
-      <ui:LogMessage sap2010:Annotation.AnnotationText="Log podsumowujący liczbę poprawnie utworzonych elementów kolejki." DisplayName="Log Dispatcher Summary" sap:VirtualizedContainerService.HintSize="450,93" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;Dispatcher completed. Queue items created successfully: &quot; &amp; addedItemsCount.ToString]">
+      <ui:LogMessage sap2010:Annotation.AnnotationText="Log podsumowujący liczbę poprawnie utworzonych elementów kolejki." DisplayName="Log Dispatcher Summary" sap:VirtualizedContainerService.HintSize="520,93" sap2010:WorkflowViewState.IdRef="LogMessage_22" Level="Info" Message="[&quot;Dispatcher completed. Queue items created successfully: &quot; &amp; addedItemsCount.ToString]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
